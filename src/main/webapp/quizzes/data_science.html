@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz | LearnXP</title>
+    <link rel="stylesheet" href="/learnxp/css/styles.css">
+    <style>
+        nav {
+            background: #ffffff;
+            color: #1f2937;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #1f2937;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #10b981;
+        }
+
+        .nav-right a {
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        .nav-right a:hover {
+            color: #dc2626;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f9fafb;
+            margin: 0;
+            padding: 0;
+            color: #1f2937;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .card-question {
+            background: #e3f2fd;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-question p {
+            font-weight: 600;
+        }
+
+        .card-question label {
+            display: block;
+            margin: 0.3rem 0;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .card-question input[type="radio"]:checked+label {
+            background: #c8e6c9;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: #10b981;
+            color: #fff;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+
+<body data-page="quiz">
+
+    <div class="container">
+        <h1>📊 Data Science Intro</h1>
+        <form action="submitquiz" method="post" class="quiz-form">
+            <input type="hidden" name="quiz_id" value="7">
+
+            <div class="card question">
+                <p><b>1. Data Science combines which two main areas?</b></p>
+                <label><input type="radio" name="q1" value="A"> Biology & Chemistry</label><br>
+                <label><input type="radio" name="q1" value="B"> Statistics & Programming</label><br>
+                <label><input type="radio" name="q1" value="C"> Literature & History</label><br>
+                <label><input type="radio" name="q1" value="D"> Arts & Music</label>
+            </div>
+
+            <div class="card question">
+                <p><b>2. Which of these is a common data science tool?</b></p>
+                <label><input type="radio" name="q2" value="A"> Excel</label><br>
+                <label><input type="radio" name="q2" value="B"> Python</label><br>
+                <label><input type="radio" name="q2" value="C"> R</label><br>
+                <label><input type="radio" name="q2" value="D"> All of the above</label>
+            </div>
+
+            <div class="card question">
+                <p><b>3. What type of learning uses labeled data?</b></p>
+                <label><input type="radio" name="q3" value="A"> Unsupervised</label><br>
+                <label><input type="radio" name="q3" value="B"> Reinforcement</label><br>
+                <label><input type="radio" name="q3" value="C"> Supervised</label><br>
+                <label><input type="radio" name="q3" value="D"> None</label>
+            </div>
+
+            <button type="submit" class="btn">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+
+</html>
